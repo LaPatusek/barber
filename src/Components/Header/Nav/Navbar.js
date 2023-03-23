@@ -13,10 +13,34 @@ const Navbar = () => {
   return (
     <Fragment>
       <div className={styles.navbar}>
-        <NavLink to='/main'>Strona główna</NavLink>
-        <NavLink to='/o-nas'>O nas</NavLink>
-        <NavLink to='/services'>Usługi</NavLink>
-        <NavLink to='/kontakt'>Kontakt</NavLink>
+        <NavLink
+          to='/main'
+          className={styles['menu-item']}
+          activeClassName={styles['active-menu-item']}
+        >
+          Strona główna
+        </NavLink>
+        <NavLink
+          to='/o-nas'
+          className={styles['menu-item']}
+          activeClassName={styles['active-menu-item']}
+        >
+          O nas
+        </NavLink>
+        <NavLink
+          to='/services'
+          className={styles['menu-item']}
+          activeClassName={styles['active-menu-item']}
+        >
+          Usługi
+        </NavLink>
+        <NavLink
+          to='/kontakt'
+          className={styles['menu-item']}
+          activeClassName={styles['active-menu-item']}
+        >
+          Kontakt
+        </NavLink>
       </div>
 
       <div className={styles['navbar-800']}>

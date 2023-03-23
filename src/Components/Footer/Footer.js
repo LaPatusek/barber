@@ -25,12 +25,11 @@ const Footer = () => {
 
       <section className={styles['third-section']}>
         <h3>Kontakt</h3>
-        <Link to='/kontakt'>
-          Strona kontaktowa
-        </Link>
-        <p>
-          <Call /> 737 350 559
-        </p>
+        <Link to='/kontakt'>Strona kontaktowa</Link>
+        <div className={styles['call-icon']}>
+          <Call />
+        </div>
+        <p>737 350 559</p>
       </section>
     </div>
   );
