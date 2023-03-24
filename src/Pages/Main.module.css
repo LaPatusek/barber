@@ -1,12 +1,28 @@
+.upper-main-image {
+  position: absolute;
+  top: 0;
+  right: 200px;
+  width: 200px;
+}
+
+.upper-main-image p {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  width: 300px;
+}
+
 .main {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 2rem;
+  display: block;
   box-sizing: border-box;
   margin-bottom: 10%;
 }
 
-.main-title h1 {
+.first-section {
+  display: flex;
+  justify-content: center;
+}
+
+.first-section > .main-title h1 {
   font-size: 5rem;
   margin-right: 16rem;
   line-height: 85px;
@@ -29,6 +45,7 @@
   display: block;
   width: fit-content;
   position: relative;
+  transition: 0.5s ease-in-out;
 }
 
 .kontakt-button::before {
@@ -39,6 +56,7 @@
   border: 1px solid var(--secondary-pink-1);
   height: 100%;
   width: 100%;
+  transition: 0.5s ease-in-out;
 }
 
 .kontakt-button::after {
@@ -49,15 +67,210 @@
   border: 1px solid var(--secondary-pink-1);
   height: 100%;
   width: 100%;
+  transition: 0.5s ease-in-out;
 }
 
-.kontakt-button:hover { 
-    color: var(--secondary-green-4);
-    transition: .5s;
+.kontakt-button:hover {
+  color: var(--secondary-green-4);
 }
 
 .kontakt-button:hover::after,
 .kontakt-button:hover::before {
-    border: 1px solid var(--secondary-green-4);
-    transition: .5s;
+  border: 1px solid var(--secondary-green-4);
+}
+
+.spacer-with-images {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 8%;
+  margin-bottom: 3%;
+}
+
+.spacer-with-images > .scissors-icon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.interior-img {
+  position: relative;
+}
+
+.interior-img img {
+  margin-right: 110px;
+  z-index: 1;
+  border-radius: 3%;
+  position: relative;
+}
+
+.interior-img::before {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: calc(100% - 3px);
+  top: 0;
+  right: 110px;
+  background-color: #000;
+  opacity: 0.45;
+  z-index: 2;
+  border-radius: 3%;
+}
+
+.second-section {
+  padding-top: 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.second-section > .right-div {
+  margin-top: 30px;
+  margin-left: 4%;
+  width: 500px;
+}
+
+.second-section > .right-div h4 {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  font-size: 1.5rem;
+  color: var(--secondary-pink-3);
+  text-align: right;
+  position: relative;
+}
+
+.right-div h4::before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  right: -53px;
+  height: 2px;
+  background-color: var(--secondary-pink-3);
+  width: 100px;
+  transition: right 0.7s ease-in-out;
+}
+
+.second-section:hover h4::before {
+  right: -35px;
+}
+
+.second-section > .right-div h2 {
+  font-size: 3rem;
+}
+
+.second-section > .right-div p {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  letter-spacing: 0.6px;
+  margin-bottom: 20px;
+  width: 400px;
+}
+
+.right-div > .right-div--link {
+  font-size: 1.5rem;
+  margin-left: 10px;
+  color: black;
+  position: relative;
+  transition: 0.7s ease-in-out;
+  letter-spacing: 0.3px;
+}
+
+.main svg {
+  transform: translateY(20%);
+}
+
+.right-div > .right-div--link::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 5px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: var(--secondary-green-4);
+}
+
+.right-div > .right-div--link:hover {
+  margin-left: 20px;
+}
+
+.third-section {
+  margin-top: 8%;
+  display: flex;
+  justify-content: center;
+}
+
+.third-section > .left-div {
+  margin-top: 40px;
+  margin-right: 30px;
+  width: 500px;
+}
+
+.third-section > .left-div h4 {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  font-size: 1.5rem;
+  color: var(--secondary-pink-3);
+  position: relative;
+}
+
+.left-div h4::before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: -55px;
+  height: 2px;
+  background-color: var(--secondary-pink-3);
+  width: 100px;
+  transition: left 0.7s ease-in-out;
+}
+
+.third-section:hover h4::before {
+  left: -25px;
+}
+
+.third-section > .left-div h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.third-section > .left-div p {
+  width: 400px;
+  float: right;
+  font-size: 1.3rem;
+  text-align: right;
+  margin-bottom: 30px;
+}
+
+.left-div--link {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  color: black;
+  position: relative;
+  transition: 0.7s ease-in-out;
+  letter-spacing: 0.3px;
+}
+
+.left-div--link::before {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: 5px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: var(--secondary-green-4);
+}
+
+.left-div--link:hover {
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .upper-main-image {
+    display: none;
+  }
 }

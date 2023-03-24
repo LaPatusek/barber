@@ -34,9 +34,7 @@ const App = () => {
         </Switch>
       </main>
 
-      <footer>
-        <Footer />
-      </footer>
+      <Footer />
     </Fragment>
   );
 };
