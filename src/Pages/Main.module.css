@@ -97,6 +97,10 @@
   box-shadow: 10px 5px 15px #000;
 }
 
+.interior-img:last-child {
+  margin-top: 170px;
+}
+
 .interior-img::before {
   content: '';
   position: absolute;
@@ -110,8 +114,12 @@
   border-radius: 3%;
 }
 
+.interior-img:first-child::before {
+  height: calc(100% - 172px);
+}
+
 .second-section {
-  padding: 8% 5%;
+  margin: 12% 5% 5% 5%;
   display: flex;
   justify-content: center;
   position: relative;
@@ -121,36 +129,33 @@
   position: relative;
 }
 
-.circle {
+.circle,
+.second-circle {
   z-index: 4;
   position: relative;
-  color: var(--secondary-green-4);
-  text-transform: uppercase;
-  font-size: 20px;
 }
 
-.circle p {
-  /* animation: circle-animation 15s linear infinite; */
-  height: 0px;
-}
-
-.second-section span {
+.circle span {
   position: absolute;
-  top: -60px;
+  top: -80px;
   left: 0;
   transform-origin: 10px 90px;
+  font-size: 20px;
+  color: var(--secondary-green-4);
+  text-transform: uppercase;
 }
 
-@keyframes circle-animation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.second-circle span {
+  position: absolute;
+  top: -80px;
+  right: 0;
+  transform-origin: 10px 90px;
+  font-size: 20px;
+  color: var(--secondary-green-4);
+  text-transform: uppercase;
 }
 
-.second-section > .circle > .text {
+.circle > .text {
   position: absolute;
   z-index: 4;
   color: var(--secondary-green-4);
@@ -228,18 +233,18 @@
 }
 
 .third-section {
-  margin-top: 3%;
-  padding: 5%;
+  margin: 12% 10% 5% 5%;
   display: flex;
   justify-content: center;
 }
 
 .third-section > .left-div {
-  margin-right: 30px;
+  margin-right: 4%;
   max-width: 600px;
 }
 
 .third-section > .left-div h4 {
+  margin-left: 8%;
   margin-bottom: 35px;
   text-transform: uppercase;
   letter-spacing: 0.7px;
@@ -265,7 +270,6 @@
 
 .third-section > .left-div h2 {
   font-size: 3rem;
-  text-transform: uppercase;
   text-align: right;
   margin-bottom: 30px;
 }

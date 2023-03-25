@@ -1,5 +1,5 @@
 import { ArrowLeft, ArrowRight } from 'iconsax-react';
-import { Fragment, useEffect } from 'react';
+import { Fragment, useLayoutEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import interior from '../Assets/barber-interior.jpg';
 import barber from '../Assets/barber-photo.jpg';
@@ -7,14 +7,29 @@ import haircut from '../Assets/haircut-main-photo.jpg';
 import styles from './Main.module.css';
 
 const Main = () => {
-  useEffect(() => {
-    const text = document.getElementById('tekst');
+  const textRef = useRef(null);
+  const secondTextRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const text = textRef.current;
+    const secondText = secondTextRef.current;
+
     text.innerHTML = text.textContent.replace(/\S/g, '<span> $& </span>');
-    const ele = document.querySelectorAll('span');
+    secondText.innerHTML = secondText.textContent.replace(
+      /\S/g,
+      '<span> $& </span>',
+    );
+
+    const ele = text.querySelectorAll('span');
+    const secEle = secondText.querySelectorAll('span');
+    text.style.transform = `rotate(${-(360 * 0.5)}deg)`;
     for (let i = 0; i < ele.length; i++) {
-      ele[i].style.transform = 'rotate(' + i * (360/ele.length)+'deg)';
+      ele[i].style.transform = `rotate(${i * ((360 * 2) / ele.length)}deg)`;
+      secEle[i].style.transform = `rotate(${
+        i * ((360 * 2) / secEle.length)
+      }deg)`;
     }
-  },[]);
+  }, []);
 
   return (
     <Fragment>
@@ -50,11 +65,9 @@ const Main = () => {
 
         <section className={styles['second-section']}>
           <div className={styles.circle}>
-            <div className={styles['circle-text']}>
-              <p id='tekst'>
-                zakład FRYZJERSKI u DOROTY 
-              </p>
-            </div>
+            <p id='tekst' ref={textRef}>
+              zakład FRYZJERSKI u DOROTY
+            </p>
           </div>
 
           <img src={barber} alt='' width='600px' />
@@ -90,7 +103,14 @@ const Main = () => {
               </Link>
             </p>
           </div>
+
           <img src={barber} alt='' width='600px' />
+
+          <div className={styles['second-circle']}>
+            <p id='second-tekst' ref={secondTextRef}>
+              zakład FRYZJERSKI u DOROTY
+            </p>
+          </div>
         </section>
       </div>
     </Fragment>
