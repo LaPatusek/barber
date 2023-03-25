@@ -1,13 +1,21 @@
 import { ArrowLeft, ArrowRight } from 'iconsax-react';
-import { Fragment } from 'react';
+import { Fragment, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import interior from '../Assets/barber-interior.jpg';
 import barber from '../Assets/barber-photo.jpg';
 import haircut from '../Assets/haircut-main-photo.jpg';
-import scissors from '../Assets/hairdressing-scissors.png';
 import styles from './Main.module.css';
 
 const Main = () => {
+  useEffect(() => {
+    const text = document.getElementById('tekst');
+    text.innerHTML = text.textContent.replace(/\S/g, '<span> $& </span>');
+    const ele = document.querySelectorAll('span');
+    for (let i = 0; i < ele.length; i++) {
+      ele[i].style.transform = 'rotate(' + i * (360/ele.length)+'deg)';
+    }
+  },[]);
+
   return (
     <Fragment>
       <div className={styles['upper-main-image']}>
@@ -32,8 +40,8 @@ const Main = () => {
         </section>
 
         <div className={styles['spacer-with-images']}>
-          <div className={styles['scissors-icon']}>
-            <img src={scissors} alt='' height='200px' />
+          <div className={styles['interior-img']}>
+            <img src={interior} alt='' width='600px' />
           </div>
           <div className={styles['interior-img']}>
             <img src={interior} alt='' width='600px' />
@@ -41,7 +49,15 @@ const Main = () => {
         </div>
 
         <section className={styles['second-section']}>
-          <img src={haircut} alt='' width='300px' />
+          <div className={styles.circle}>
+            <div className={styles['circle-text']}>
+              <p id='tekst'>
+                zakład FRYZJERSKI u DOROTY 
+              </p>
+            </div>
+          </div>
+
+          <img src={barber} alt='' width='600px' />
           <div className={styles['right-div']}>
             <h4> O nas </h4>
             <h2>
@@ -74,7 +90,7 @@ const Main = () => {
               </Link>
             </p>
           </div>
-          <img src={barber} alt='' width='500px' />
+          <img src={barber} alt='' width='600px' />
         </section>
       </div>
     </Fragment>
