@@ -1,0 +1,13 @@
+.card {
+    padding: 4rem;
+    padding-top: 2rem;
+}
+
+.card h1 {
+    text-align: center;
+    color: var(--secondary-pink-3);
+    font-size: 2.5rem;
+    border-bottom: 1.5px solid var(--secondary-pink-3);
+    padding-bottom: 15px;
+    letter-spacing: 0.8px;
+}

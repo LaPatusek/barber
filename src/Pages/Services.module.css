@@ -1,0 +1,62 @@
+.card {
+  padding: 4rem;
+  padding-top: 2rem;
+}
+
+.image-box {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.image-box::before {
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  top: 0;
+  background-color: #000;
+  opacity: 0.45;
+  z-index: 2;
+  border-radius: 3%;
+}
+
+.image-box img {
+  max-width: 80%;
+  border-radius: 3%;
+}
+
+.image-box h1 {
+    color: var(--secondary-pink-1);
+    text-align: center;
+    z-index: 4;
+    width: 50%;
+    text-transform: uppercase;
+    letter-spacing: .7px;
+    position: absolute;
+    font-size:50px;
+    top:30%;
+}
+
+.services-section {
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    width: 100%;
+}
+
+.service-section--title {
+    width: 60%;
+}
+
+.services-section h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--secondary-pink-3);
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    padding-bottom: 15px;
+    border-bottom: 1.5px solid var(--secondary-pink-3);
+}
