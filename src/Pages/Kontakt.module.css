@@ -1,13 +1,54 @@
 .card {
-    padding: 4rem;
-    padding-top: 2rem;
+  padding: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 8rem;
 }
 
 .card h1 {
-    text-align: center;
-    color: var(--secondary-pink-3);
-    font-size: 2.5rem;
-    border-bottom: 1.5px solid var(--secondary-pink-3);
-    padding-bottom: 15px;
-    letter-spacing: 0.8px;
+  text-align: center;
+  color: var(--secondary-pink-3);
+  font-size: 2.5rem;
+  border-bottom: 1.5px solid var(--secondary-pink-3);
+  padding-bottom: 15px;
+  letter-spacing: 0.8px;
+}
+
+.content {
+  padding-top: 3.5rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.left-section {
+  padding-top: 6vmin;
+  text-align: center;
+}
+
+.left-section h4 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  letter-spacing: 0.8px;
+}
+
+.left-section p {
+  letter-spacing: 0.7px;
+  line-height: 23px;
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 800px) {
+  .card {
+    padding: 0;
+  }
+
+  .content {
+    display: block;
+  }
+
+  .left-section,
+  .right-section {
+    margin-bottom: 3rem;
+    padding-top: 0;
+  }
 }
