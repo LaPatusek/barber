@@ -36,7 +36,6 @@
 .service-card {
   display: flex;
   justify-content: center;
-
 }
 
 .services-section {
@@ -131,11 +130,30 @@
   display: inline-block;
 }
 
-.three-in-row img {
-  background-color: white;
+.three-images-in-row {
+  margin-bottom: 2.5rem;
+}
+
+.three-images-in-row h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.7px;
+}
+
+.three-images-in-row img {
+  background-color: transparent;
   margin-left: 1rem;
   margin-right: 1rem;
-  border: 1px solid black;
+  border: 4px solid black;
   border-radius: 50%;
   padding: 1rem;
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+.three-images-in-row img:hover {
+  background-color: rgb(206, 98, 98);
+  padding: 0.7rem;
 }
