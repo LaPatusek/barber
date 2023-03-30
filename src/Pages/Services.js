@@ -8,7 +8,7 @@ import styles from './Services.module.css';
 
 const Services = () => {
   const [pickedGender, setPickedGender] = useState('female');
-  const [hairLength, setHairLength] = useState('mid');
+  const [hairLength, setHairLength] = useState(null);
 
   const femaleFunction = () => {
     setPickedGender('female');
@@ -59,56 +59,235 @@ const Services = () => {
             <div className={styles['selected-choice']}>
               <div className={styles['three-images-in-row']}>
                 <h3>Określ długość swoich włosów</h3>
+                <img
+                  src={Short}
+                  alt=''
+                  onClick={shortHairFunction}
+                  className={styles[`${hairLength === 'short' && 'active'}`]}
+                />
 
-                <img src={Short} alt='' onClick={shortHairFunction} />
+                <img
+                  src={Mid}
+                  alt=''
+                  onClick={midHairFunction}
+                  className={styles[`${hairLength === 'mid' && 'active'}`]}
+                />
 
-                <img src={Mid} alt='' onClick={midHairFunction} />
-
-                <img src={Long} alt='' onClick={longHairFunction} />
+                <img
+                  src={Long}
+                  alt=''
+                  onClick={longHairFunction}
+                  className={styles[`${hairLength === 'long' && 'active'}`]}
+                />
               </div>
-
-              <h4>
-                Damskie strzyżenie / {hairLength === 'short' && '25zł'}
-                {hairLength === 'mid' && '40zł'}
-                {hairLength === 'long' && '50zł'}
-              </h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                <br /> Cras tincidunt ligula nibh, a blandit erat tempor
-                tincidunt.
-              </p>
-
-              <div className={styles['three-in-row']}>
+              
+              <div className={styles[`${hairLength === null && 'blur'}`]}>
                 <h4>
-                  Damskie strzyżenie <br />/ {hairLength === 'short' && '25zł'}
+                  Damskie strzyżenie / {hairLength === 'short' && '25zł'}
                   {hairLength === 'mid' && '40zł'}
                   {hairLength === 'long' && '50zł'}
                 </h4>
-                <p>Barber Only</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  <br /> Cras tincidunt ligula nibh, a blandit erat tempor
+                  tincidunt.
+                </p>
+
+                <div className={styles['three-in-row']}>
+                  <h4>
+                    Damskie strzyżenie <br />/{' '}
+                    {hairLength === 'short' && '25zł'}
+                    {hairLength === 'mid' && '40zł'}
+                    {hairLength === 'long' && '50zł'}
+                  </h4>
+                  <p>Barber Only</p>
+                </div>
+
+                <div className={styles['three-in-row']}>
+                  <h4>
+                    Strzyżenie grzywki <br />/{' '}
+                    {hairLength === 'short' && '25zł'}
+                    {hairLength === 'mid' && '40zł'}
+                    {hairLength === 'long' && '50zł'}
+                  </h4>
+                  <p>Barber Only</p>
+                </div>
+                <h4>Koloryzacja</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <hr />
+                <div className={styles.ceny}>
+                  <h5>NATURALNA KOLORYZACJA</h5>
+                  <h5>
+                    {hairLength === 'short' && '125zł'}
+                    {hairLength === 'mid' && '140zł'}
+                    {hairLength === 'long' && '150zł'}
+                  </h5>
+                </div>
+                <div className={styles.ceny}>
+                  <h5>NATURALNA KOLORYZACJA</h5>
+                  <h5>
+                    {hairLength === 'short' && '125zł'}
+                    {hairLength === 'mid' && '140zł'}
+                    {hairLength === 'long' && '150zł'}
+                  </h5>
+                </div>
+                <div className={styles.ceny}>
+                  <h5>NATURALNA KOLORYZACJA</h5>
+                  <h5>
+                    {hairLength === 'short' && '125zł'}
+                    {hairLength === 'mid' && '140zł'}
+                    {hairLength === 'long' && '150zł'}
+                  </h5>
+                </div>
+                <div className={styles.ceny}>
+                  <h5>NATURALNA KOLORYZACJA</h5>
+                  <h5>
+                    {hairLength === 'short' && '125zł'}
+                    {hairLength === 'mid' && '140zł'}
+                    {hairLength === 'long' && '150zł'}
+                  </h5>
+                </div>
+                <div className={styles.ceny}>
+                  <h5>NATURALNA KOLORYZACJA</h5>
+                  <h5>
+                    {hairLength === 'short' && '125zł'}
+                    {hairLength === 'mid' && '140zł'}
+                    {hairLength === 'long' && '150zł'}
+                  </h5>
+                </div>
+
+                <h4>Refleksy</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <hr />
+                <div className={styles.ceny}>
+                  <h5>NATURALNA KOLORYZACJA</h5>
+                  <h5>
+                    {hairLength === 'short' && '125zł'}
+                    {hairLength === 'mid' && '140zł'}
+                    {hairLength === 'long' && '150zł'}
+                  </h5>
+                </div>
+                <div className={styles.ceny}>
+                  <h5>NATURALNA KOLORYZACJA</h5>
+                  <h5>
+                    {hairLength === 'short' && '125zł'}
+                    {hairLength === 'mid' && '140zł'}
+                    {hairLength === 'long' && '150zł'}
+                  </h5>
+                </div>
+                <div className={styles.ceny}>
+                  <h5>NATURALNA KOLORYZACJA</h5>
+                  <h5>
+                    {hairLength === 'short' && '125zł'}
+                    {hairLength === 'mid' && '140zł'}
+                    {hairLength === 'long' && '150zł'}
+                  </h5>
+                </div>
+                <div className={styles.ceny}>
+                  <h5>NATURALNA KOLORYZACJA</h5>
+                  <h5>
+                    {hairLength === 'short' && '125zł'}
+                    {hairLength === 'mid' && '140zł'}
+                    {hairLength === 'long' && '150zł'}
+                  </h5>
+                </div>
+                <div className={styles.ceny}>
+                  <h5>NATURALNA KOLORYZACJA</h5>
+                  <h5>
+                    {hairLength === 'short' && '125zł'}
+                    {hairLength === 'mid' && '140zł'}
+                    {hairLength === 'long' && '150zł'}
+                  </h5>
+                </div>
+
+                <h4>Stylizacja włosów</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <hr />
+                <div className={styles.ceny}>
+                  <h5>NATURALNA KOLORYZACJA</h5>
+                  <h5>
+                    {hairLength === 'short' && '125zł'}
+                    {hairLength === 'mid' && '140zł'}
+                    {hairLength === 'long' && '150zł'}
+                  </h5>
+                </div>
+                <div className={styles.ceny}>
+                  <h5>NATURALNA KOLORYZACJA</h5>
+                  <h5>
+                    {hairLength === 'short' && '125zł'}
+                    {hairLength === 'mid' && '140zł'}
+                    {hairLength === 'long' && '150zł'}
+                  </h5>
+                </div>
+                <div className={styles.ceny}>
+                  <h5>NATURALNA KOLORYZACJA</h5>
+                  <h5>
+                    {hairLength === 'short' && '125zł'}
+                    {hairLength === 'mid' && '140zł'}
+                    {hairLength === 'long' && '150zł'}
+                  </h5>
+                </div>
+                <div className={styles.ceny}>
+                  <h5>NATURALNA KOLORYZACJA</h5>
+                  <h5>
+                    {hairLength === 'short' && '125zł'}
+                    {hairLength === 'mid' && '140zł'}
+                    {hairLength === 'long' && '150zł'}
+                  </h5>
+                </div>
+                <div className={styles.ceny}>
+                  <h5>NATURALNA KOLORYZACJA</h5>
+                  <h5>
+                    {hairLength === 'short' && '125zł'}
+                    {hairLength === 'mid' && '140zł'}
+                    {hairLength === 'long' && '150zł'}
+                  </h5>
+                </div>
+
+                <h4>Regneracja</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <hr />
+                <div className={styles.ceny}>
+                  <h5>NATURALNA KOLORYZACJA</h5>
+                  <h5>
+                    {hairLength === 'short' && '125zł'}
+                    {hairLength === 'mid' && '140zł'}
+                    {hairLength === 'long' && '150zł'}
+                  </h5>
+                </div>
+                <div className={styles.ceny}>
+                  <h5>NATURALNA KOLORYZACJA</h5>
+                  <h5>
+                    {hairLength === 'short' && '125zł'}
+                    {hairLength === 'mid' && '140zł'}
+                    {hairLength === 'long' && '150zł'}
+                  </h5>
+                </div>
+                <div className={styles.ceny}>
+                  <h5>NATURALNA KOLORYZACJA</h5>
+                  <h5>
+                    {hairLength === 'short' && '125zł'}
+                    {hairLength === 'mid' && '140zł'}
+                    {hairLength === 'long' && '150zł'}
+                  </h5>
+                </div>
+                <div className={styles.ceny}>
+                  <h5>NATURALNA KOLORYZACJA</h5>
+                  <h5>
+                    {hairLength === 'short' && '125zł'}
+                    {hairLength === 'mid' && '140zł'}
+                    {hairLength === 'long' && '150zł'}
+                  </h5>
+                </div>
+                <div className={styles.ceny}>
+                  <h5>NATURALNA KOLORYZACJA</h5>
+                  <h5>
+                    {hairLength === 'short' && '125zł'}
+                    {hairLength === 'mid' && '140zł'}
+                    {hairLength === 'long' && '150zł'}
+                  </h5>
+                </div>
               </div>
-
-              <div className={styles['three-in-row']}>
-                <h4>
-                  Strzyżenie grzywki <br />/ {hairLength === 'short' && '25zł'}
-                  {hairLength === 'mid' && '40zł'}
-                  {hairLength === 'long' && '50zł'}
-                </h4>
-                <p>Barber Only</p>
-              </div>
-
-              <h4>Koloryzacja</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-
-              <h4>Refleksy</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-
-              <h4>Stylizacja włosów</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-              <h4>Regneracja</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
           )}
 

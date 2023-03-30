@@ -54,6 +54,7 @@ const Navbar = () => {
               to='/main'
               className={styles['menu-item-800']}
               activeClassName={styles['active-menu-item-800']}
+              onClick={menuHandler}
             >
               <span>Strona główna</span>
             </NavLink>
@@ -62,6 +63,7 @@ const Navbar = () => {
               to='/o-nas'
               className={styles['menu-item-800']}
               activeClassName={styles['active-menu-item-800']}
+              onClick={menuHandler}
             >
               <span>O nas</span>
             </NavLink>
@@ -70,6 +72,7 @@ const Navbar = () => {
               to='/services'
               className={styles['menu-item-800']}
               activeClassName={styles['active-menu-item-800']}
+              onClick={menuHandler}
             >
               <span>Usługi</span>
             </NavLink>
@@ -78,6 +81,7 @@ const Navbar = () => {
               to='/kontakt'
               className={styles['menu-item-800']}
               activeClassName={styles['active-menu-item-800']}
+              onClick={menuHandler}
             >
               <span> Kontakt</span>
             </NavLink>
