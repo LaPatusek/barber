@@ -1,5 +1,13 @@
+import Card from '../Components/UI/Card';
+import ScrollToTop from '../Components/UI/ScrollToTop';
+
 const AboutUs = () => {
-  return <h1>AboutUs</h1>;
+  return (
+    <Card>
+      <h1>AboutUs</h1>
+      <ScrollToTop />
+    </Card>
+  );
 };
 
 export default AboutUs;

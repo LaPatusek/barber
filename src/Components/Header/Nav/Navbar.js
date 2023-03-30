@@ -1,5 +1,5 @@
 import { HambergerMenu } from 'iconsax-react';
-import { Fragment, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './Navbar.module.css';
 
@@ -9,6 +9,15 @@ const Navbar = () => {
   const menuHandler = () => {
     setMenuIsVis((prev) => !prev);
   };
+
+  useEffect(() => {
+    if (menuIsVis) {
+      document.body.style.overflowY = 'hidden';
+    }
+    if (!menuIsVis) {
+      document.body.style.overflowY = 'scroll';
+    }
+  }, [menuIsVis]);
 
   return (
     <Fragment>

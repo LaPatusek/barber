@@ -90,6 +90,7 @@ const Main = () => {
         </section>
 
         <section className={styles['third-section']}>
+     
           <div className={styles['left-div']}>
             <h4>Usługi</h4>
             <h2> Lorem ipsum dolor</h2>
@@ -103,7 +104,6 @@ const Main = () => {
               </Link>
             </p>
           </div>
-
           <img src={barber} alt='' width='600px' />
 
           <div className={styles['second-circle']}>

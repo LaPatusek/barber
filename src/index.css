@@ -24,6 +24,7 @@ body {
   margin: 0;
   font-family: 'Cormorant Garamond', serif;
   font-weight: bold;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--secondary-pink-2);

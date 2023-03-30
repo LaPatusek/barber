@@ -1,4 +1,5 @@
 import Map from '../Components/Elements/Map/Map';
+import ScrollToTop from '../Components/UI/ScrollToTop';
 import styles from './Kontakt.module.css';
 
 const Kontakt = () => {
@@ -29,6 +30,7 @@ const Kontakt = () => {
           <Map />
         </div>
       </div>
+      <ScrollToTop />
     </div>
   );
 };

@@ -4,6 +4,7 @@ import Long from '../Assets/LongHair.svg';
 import Mid from '../Assets/MidHair.svg';
 import Short from '../Assets/ShortHair.svg';
 import Card from '../Components/UI/Card';
+import ScrollToTop from '../Components/UI/ScrollToTop';
 import styles from './Services.module.css';
 
 const Services = () => {
@@ -325,6 +326,7 @@ const Services = () => {
           )}
         </div>
       </div>
+      <ScrollToTop />
     </Card>
   );
 };

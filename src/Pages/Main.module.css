@@ -310,5 +310,109 @@
 @media screen and (max-width: 800px) {
   .upper-main-image {
     display: none;
+    right: 0;
+    top: 100px;
+  }
+
+  .first-section {
+    display: block;
+  }
+
+  .first-section > .main-title h1 {
+    font-size: 4rem;
+    margin-right: 0;
+    margin-left: 10px;
+    line-height: 65px;
+    margin-bottom: 20px;
+  }
+
+  .kontakt-button {
+    margin-left: 10px;
+  }
+
+  .spacer-with-images {
+    display: block;
+    margin-bottom: 8rem;
+  }
+
+  .interior-img img {
+    width: 82vmin;
+  }
+
+  .interior-img::before {
+    position: absolute;
+    width: 82vmin;
+    height: calc(100% - 3px);
+    top: 0;
+    left: 0px;
+  }
+
+  .interior-img:first-child::before {
+    height: 100%;
+  }
+
+  .interior-img:last-child {
+    margin-top: 30px;
+    margin-left: 40px;
+  }
+
+  .second-section,
+  .third-section {
+    display: block;
+  }
+
+  .second-section img,
+  .third-section img {
+    width: 85vmin;
+  }
+
+  .third-section img {
+    transform: scaleX(-1);
+  }
+
+  .second-section > .right-div,
+  .third-section > .left-div {
+    width: 85vmin;
+  }
+
+  .second-section > .right-div {
+    margin-left: 0;
+  }
+
+  .second-section > .right-div h4 {
+    position: absolute;
+    top: -35px;
+    right: 20px;
+  }
+
+  .second-section > .right-div h4::before {
+    width: 70px;
+    right: -22px;
+  }
+
+  .third-section > .left-div h2,
+  .second-section > .right-div h2 {
+    margin-bottom: 10px;
+  }
+
+  .third-section > .left-div p,
+  .second-section > .right-div p {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .third-section > .left-div h4::before {
+    width: 70px;
+    left: -27px;
+  }
+
+  .circle span {
+    left: 300px;
+    top: -120px;
+  }
+
+  .second-circle span {
+    right: 55px;
+    top: -140px;
   }
 }
