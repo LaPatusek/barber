@@ -22,12 +22,10 @@ const Main = () => {
 
     const ele = text.querySelectorAll('span');
     const secEle = secondText.querySelectorAll('span');
-    text.style.transform = `rotate(${-(360 * 0.5)}deg)`;
+    text.style.transform = `rotate(${-360}deg)`;
     for (let i = 0; i < ele.length; i++) {
-      ele[i].style.transform = `rotate(${i * ((360 * 2) / ele.length)}deg)`;
-      secEle[i].style.transform = `rotate(${
-        i * ((360 * 2) / secEle.length)
-      }deg)`;
+      ele[i].style.transform = `rotate(${i * (360 / ele.length)}deg)`;
+      secEle[i].style.transform = `rotate(${i * (360 / secEle.length)}deg)`;
     }
   }, []);
 
@@ -90,7 +88,6 @@ const Main = () => {
         </section>
 
         <section className={styles['third-section']}>
-     
           <div className={styles['left-div']}>
             <h4>Usługi</h4>
             <h2> Lorem ipsum dolor</h2>
