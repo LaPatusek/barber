@@ -1,12 +1,6 @@
 @import './css-reset.css';
 
 :root {
-  --primary-color-0: #d9d5b8;
-  --primary-color-1: #fffefa;
-  --primary-color-2: #fffdec;
-  --primary-color-3: #b7b28a;
-  --primary-color-4: #989162;
-
   --secondary-pink-0: #d9beb8;
   --secondary-pink-1: #fffbfa;
   --secondary-pink-2: #ffefec;
@@ -21,7 +15,6 @@
 }
 
 body {
-  margin: 0;
   font-family: 'Cormorant Garamond', serif;
   font-weight: bold;
   scroll-behavior: smooth;

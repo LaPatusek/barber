@@ -23,13 +23,6 @@ const Navbar = () => {
     <Fragment>
       <div className={styles.navbar}>
         <NavLink
-          to='/main'
-          className={styles['menu-item']}
-          activeClassName={styles['active-menu-item']}
-        >
-          Strona główna
-        </NavLink>
-        <NavLink
           to='/o-nas'
           className={styles['menu-item']}
           activeClassName={styles['active-menu-item']}

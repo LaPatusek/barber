@@ -1,7 +1,7 @@
 .upper-main-image {
   position: absolute;
-  top: 0;
-  right: 200px;
+  top: 100px;
+  right: 120px;
   width: 200px;
 }
 
@@ -95,6 +95,7 @@
   border-radius: 3%;
   position: relative;
   box-shadow: 10px 5px 15px #000;
+  width: 45vmax;
 }
 
 .interior-img:last-child {
@@ -104,7 +105,7 @@
 .interior-img::before {
   content: '';
   position: absolute;
-  width: 600px;
+  width:  100%;
   height: calc(100% - 3px);
   top: 0;
   right: 0px;
@@ -181,15 +182,15 @@
   content: '';
   position: absolute;
   bottom: -3px;
-  right: -53px;
+  right: 0px;
   height: 2px;
   background-color: var(--secondary-pink-3);
-  width: 100px;
+  width: 75px;
   transition: right 0.7s ease-in-out;
 }
 
 .second-section:hover h4::before {
-  right: -35px;
+  right: 35px;
 }
 
 .second-section > .right-div h2 {
@@ -257,7 +258,7 @@
   content: '';
   position: absolute;
   bottom: -3px;
-  left: -55px;
+  left: 0px;
   height: 2px;
   background-color: var(--secondary-pink-3);
   width: 100px;
@@ -265,7 +266,7 @@
 }
 
 .third-section:hover h4::before {
-  left: -25px;
+  left: 35px;
 }
 
 .third-section > .left-div h2 {
