@@ -124,6 +124,13 @@
   display: flex;
   justify-content: center;
   position: relative;
+  width: 80%;
+}
+
+.second-section img,
+.third-section img {
+  width:60%;
+  height: auto;
 }
 
 .second-section img {
@@ -237,6 +244,7 @@
   margin: 12% 10% 5% 5%;
   display: flex;
   justify-content: center;
+  width: 80%;
 }
 
 .third-section > .left-div {
