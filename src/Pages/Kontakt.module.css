@@ -1,7 +1,5 @@
 .card {
-  padding: 4rem;
-  padding-top: 2rem;
-  padding-bottom: 8rem;
+  padding: 2rem 4rem 8rem 4rem;
 }
 
 .card h1 {
@@ -11,11 +9,12 @@
   border-bottom: 1.5px solid var(--secondary-pink-3);
   padding-bottom: 15px;
   letter-spacing: 0.8px;
+  user-select: none;
 }
 
 .content {
-  padding-top: 3.5rem;
-  display: flex;
+  padding-top: 4rem;
+  grid-template-columns: 25% 50%;
   justify-content: space-evenly;
 }
 
@@ -25,16 +24,16 @@
 }
 
 .left-section h4 {
-  font-size: 1.5rem;
-  margin-top: 20px;
-  margin-bottom: 5px;
+  font-size: 28px;
+  margin: 20px 0 5px 0;
   letter-spacing: 0.8px;
 }
 
 .left-section p {
-  letter-spacing: 0.7px;
+  letter-spacing: 0.6px;
   line-height: 23px;
-  font-size: 1.25rem;
+  font-size: 20px;
+  color: #1a1a1a;
 }
 
 @media screen and (max-width: 800px) {

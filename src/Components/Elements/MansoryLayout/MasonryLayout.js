@@ -25,20 +25,20 @@ const MasonryLayout = () => {
   images = images.map((image) => {
     return (
       <div id={image.id} key={image.id}>
-        <img src={image.src} width='90%' alt='' />
+        <img src={image.src} width='90%' alt={image.id} />
       </div>
     );
   });
 
   return (
     <div className={styles.gallery}>
-    <Masonry
-      breakpointCols={breakpointColumnsObj}
-      className={styles['my-masonry-grid']}
-      columnClassName={styles['my-masonry-grid_column']}
-    >
-      {images}
-    </Masonry>
+      <Masonry
+        breakpointCols={breakpointColumnsObj}
+        className={styles['my-masonry-grid']}
+        columnClassName={styles['my-masonry-grid_column']}
+      >
+        {images}
+      </Masonry>
     </div>
   );
 };

@@ -39,7 +39,7 @@ const Main = () => {
         </p>
       </div>
       <div className={styles.main}>
-        <section className={styles['first-section']}>
+        <section className={`${styles['first-section']} flex`}>
           <div className={styles['main-title']}>
             <h1>
               ZAKŁAD <br /> FRYZJERSKI <br />
@@ -52,23 +52,37 @@ const Main = () => {
           </div>
         </section>
 
-        <div className={styles['spacer-with-images']}>
-          <div className={styles['interior-img']}>
-            <img src={interior} alt='' width='600px' />
+        <div className={styles['two-images-in-row']}>
+          <div className={styles['interior-image-wrap']}>
+            <img
+              src={interior}
+              alt=''
+              width='650px'
+              height={'365.625px'}
+              className={styles['interior-image']}
+            />
           </div>
-          <div className={styles['interior-img']}>
-            <img src={interior} alt='' width='600px' />
+          <div className={styles['interior-image-wrap']}>
+            <img
+              src={interior}
+              alt=''
+              width='650px'
+              height={'365.625px'}
+              className={styles['interior-image']}
+            />
           </div>
         </div>
 
         <section className={styles['second-section']}>
-          <div className={styles.circle}>
-            <p id='tekst' ref={textRef}>
-              zakład FRYZJERSKI u DOROTY
-            </p>
-          </div>
+          <div className={'image-wrap'}>
+            <div className={styles.circle}>
+              <p id='tekst' ref={textRef}>
+                zakład FRYZJERSKI
+              </p>
+            </div>
 
-          <img src={barber} alt='' width='600px' />
+            <img src={barber} alt='' width='600px' height={'400px'} />
+          </div>
           <div className={styles['right-div']}>
             <h4> O nas </h4>
             <h2>
@@ -101,12 +115,15 @@ const Main = () => {
               </Link>
             </p>
           </div>
-          <img src={barber} alt='' width='600px' />
 
-          <div className={styles['second-circle']}>
-            <p id='second-tekst' ref={secondTextRef}>
-              zakład FRYZJERSKI u DOROTY
-            </p>
+          <div className={styles['image-wrap']}>
+            <img src={barber} alt='' width='600px' />
+
+            <div className={styles['second-circle']}>
+              <p id='second-tekst' ref={secondTextRef}>
+                zakład FRYZJERSKI
+              </p>
+            </div>
           </div>
         </section>
       </div>

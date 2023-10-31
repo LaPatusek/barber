@@ -12,21 +12,17 @@
 }
 
 .main {
-  display: block;
-  box-sizing: border-box;
   margin-bottom: 10%;
 }
 
 .first-section {
-  display: flex;
   justify-content: center;
 }
 
 .first-section > .main-title h1 {
   font-size: 5rem;
-  margin-right: 16rem;
+  margin: 0 16rem 20px 0;
   line-height: 85px;
-  margin-bottom: 20px;
 }
 
 .second-part-of-title {
@@ -34,18 +30,16 @@
 }
 
 .kontakt-button {
-  border: 5px solid black;
-  background-color: black;
-  padding: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
+  border: 5px solid #0f0f0f;
+  background-color: #0f0f0f;
+  padding: 10px 30px;
   font-size: 2rem;
   color: var(--secondary-pink-1);
   margin-bottom: 20px;
   display: block;
   width: fit-content;
   position: relative;
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .kontakt-button::before {
@@ -56,7 +50,7 @@
   border: 1px solid var(--secondary-pink-1);
   height: 100%;
   width: 100%;
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .kontakt-button::after {
@@ -67,7 +61,7 @@
   border: 1px solid var(--secondary-pink-1);
   height: 100%;
   width: 100%;
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .kontakt-button:hover {
@@ -79,103 +73,78 @@
   border: 1px solid var(--secondary-green-4);
 }
 
-.spacer-with-images {
-  display: flex;
-  justify-content: space-around;
-  position: relative;
-  margin: 8% 3% 3% 3%;
+.two-images-in-row {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 50% 50%;
 }
 
-.interior-img {
+.interior-image-wrap {
   position: relative;
+  justify-self: center;
 }
 
-.interior-img img {
+.interior-image {
   z-index: 1;
   border-radius: 3%;
   position: relative;
-  box-shadow: 10px 5px 15px #000;
-  width: 45vmax;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  width: 650px;
+  max-width: 100%;
 }
 
-.interior-img:last-child {
+.interior-image-wrap:last-child {
   margin-top: 170px;
 }
 
-.interior-img::before {
+.interior-image-wrap::before {
   content: '';
   position: absolute;
-  width:  100%;
+  width: 100%;
   height: calc(100% - 3px);
   top: 0;
-  right: 0px;
+  right: 0;
   background-color: #000;
   opacity: 0.45;
-  z-index: 2;
+  z-index: 5;
   border-radius: 3%;
 }
 
-.interior-img:first-child::before {
+.interior-image-wrap:first-child::before {
   height: calc(100% - 172px);
 }
 
 .second-section {
-  margin: 12% 5% 5% 5%;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  width: 80%;
+  margin: 10rem auto;
+  width: 65%;
+  display: grid;
+  grid-template-columns: 600px calc(100% - 600px);
 }
 
-.second-section img,
-.third-section img {
-  width:60%;
-  height: auto;
-}
-
-.second-section img {
-  position: relative;
-}
-
-.circle,
-.second-circle {
-  z-index: 4;
-  position: relative;
-}
-
-.circle span {
-  position: absolute;
-  top: -80px;
-  left: 0;
-  transform-origin: 10px 90px;
-  font-size: 20px;
-  color: var(--secondary-green-4);
-  text-transform: uppercase;
-}
-
+.circle span,
 .second-circle span {
   position: absolute;
   top: -80px;
-  right: 0;
   transform-origin: 10px 90px;
-  font-size: 20px;
+  font-size: 18px;
   color: var(--secondary-green-4);
   text-transform: uppercase;
 }
 
-.circle > .text {
-  position: absolute;
-  z-index: 4;
-  color: var(--secondary-green-4);
-  text-transform: uppercase;
+.circle span {
+  left: 0;
 }
 
-.second-section > .right-div {
-  margin-left: 4%;
+.second-circle span {
+  right: 0;
+}
+
+.right-div {
+  margin-left: 25px;
   max-width: 600px;
 }
 
-.second-section > .right-div h4 {
+.right-div h4 {
   margin-bottom: 35px;
   text-transform: uppercase;
   letter-spacing: 0.7px;
@@ -200,32 +169,32 @@
   right: 35px;
 }
 
-.second-section > .right-div h2 {
+.right-div h2 {
   font-size: 3rem;
+  letter-spacing: 0.5px;
 }
 
-.second-section > .right-div p {
-  margin-top: 20px;
+.right-div p {
   font-size: 1.2rem;
   letter-spacing: 0.6px;
-  margin-bottom: 20px;
+  margin: 20px 0;
   max-width: 400px;
+  color: #1a1a1a;
 }
 
-.right-div > .right-div--link {
+.right-div--link {
   font-size: 1.5rem;
   margin-left: 10px;
-  color: black;
+  color: #1a1a1a;
   position: relative;
   transition: 0.7s ease-in-out;
-  letter-spacing: 0.3px;
 }
 
 .main svg {
-  transform: translateY(20%);
+  transform: translateY(5px);
 }
 
-.right-div > .right-div--link::before {
+.right-div--link::before {
   content: '';
   position: absolute;
   left: -10px;
@@ -236,23 +205,24 @@
   background-color: var(--secondary-green-4);
 }
 
-.right-div > .right-div--link:hover {
+.right-div--link:hover {
   margin-left: 20px;
 }
 
 .third-section {
-  margin: 12% 10% 5% 5%;
-  display: flex;
-  justify-content: center;
-  width: 80%;
+  margin: 10rem auto;
+  width: 65%;
+  display: grid;
+  grid-template-columns: calc(100% - 600px) 600px;
+  position: relative;
 }
 
-.third-section > .left-div {
+.left-div {
   margin-right: 4%;
   max-width: 600px;
 }
 
-.third-section > .left-div h4 {
+.left-div h4 {
   margin-left: 8%;
   margin-bottom: 35px;
   text-transform: uppercase;
@@ -277,28 +247,27 @@
   left: 35px;
 }
 
-.third-section > .left-div h2 {
+.left-div h2 {
   font-size: 3rem;
   text-align: right;
   margin-bottom: 30px;
 }
 
-.third-section > .left-div p {
+.left-div p {
   max-width: 400px;
   float: right;
   font-size: 1.3rem;
   text-align: right;
   margin-bottom: 30px;
-  display: block;
+  color: #1a1a1a;
 }
 
 .left-div--link {
   font-size: 1.5rem;
   margin-right: 10px;
-  color: black;
+  color: #1a1a1a;
   position: relative;
   transition: 0.7s ease-in-out;
-  letter-spacing: 0.3px;
 }
 
 .left-div--link::before {
@@ -344,11 +313,11 @@
     margin-bottom: 8rem;
   }
 
-  .interior-img img {
+  .interior-image-wrap img {
     width: 82vmin;
   }
 
-  .interior-img::before {
+  .interior-image-wrap::before {
     position: absolute;
     width: 82vmin;
     height: calc(100% - 3px);
@@ -356,11 +325,11 @@
     left: 0px;
   }
 
-  .interior-img:first-child::before {
+  .interior-image-wrap:first-child::before {
     height: 100%;
   }
 
-  .interior-img:last-child {
+  .interior-image-wrap:last-child {
     margin-top: 30px;
     margin-left: 40px;
   }

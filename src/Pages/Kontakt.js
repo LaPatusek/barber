@@ -6,23 +6,23 @@ const Kontakt = () => {
   return (
     <div className={styles.card}>
       <h1>Skontaktuj się z nami</h1>
-      <div className={styles.content}>
+      <div className={`${styles.content} grid`}>
         <div className={styles['left-section']}>
           <h4>Telefon</h4>
-          <p>+48 737 350 559</p>
+          <p>+48 111 111 111</p>
 
           <h4>Adres</h4>
-          <p>Niebylec 171</p>
+          <p>Niebylec 111</p>
 
           <h4>Godziny otwarcia</h4>
           <p>
-            Wt. - Czw. 9:00 - 17
+            Pon. - Czw. 9:00 - 17
             <br />
             Piątek 10 - 17
             <br />
             Sobota 8 - 17
             <br />
-            Nd & Pon - Zamknięte
+            Nd - Zamknięte
           </p>
         </div>
 
