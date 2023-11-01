@@ -15,38 +15,33 @@
 }
 
 .about-us-text p {
-  margin: auto;
+  margin: 30px auto;
   width: 50%;
   letter-spacing: 0.7px;
   font-size: 1.1rem;
-  margin-bottom: 30px;
   line-height: 21px;
 }
 
 .about-us-text h3 {
-  margin-top: 30px;
   color: var(--secondary-pink-3);
   font-size: 1.7rem;
-  margin-bottom: 40px;
+  margin: 30px 0 40px 0;
 }
 
 .service-button {
   border: 5px solid #1f1f1f;
   background-color: #1f1f1f;
-  padding: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 10px 30px;
   font-size: 2rem;
+  letter-spacing: 0.6px;
   color: var(--secondary-pink-1);
-  width: fit-content;
   position: relative;
   transition: 0.5s ease-in-out;
 }
 
-.service-button::before {
+.service-button::before,
+.service-button::after {
   position: absolute;
-  top: 0;
-  left: 0;
   content: '';
   border: 1px solid var(--secondary-pink-1);
   height: 100%;
@@ -54,15 +49,14 @@
   transition: 0.5s ease-in-out;
 }
 
+.service-button::before {
+  top: 0;
+  left: 0;
+}
+
 .service-button::after {
-  position: absolute;
   bottom: 0;
   right: 0;
-  content: '';
-  border: 1px solid var(--secondary-pink-1);
-  height: 100%;
-  width: 100%;
-  transition: 0.5s ease-in-out;
 }
 
 .service-button:hover,
@@ -82,17 +76,12 @@
   border: 1px solid var(--secondary-pink-3);
 }
 
-.faq-wrap {
-  width: 100%;
-}
-
 .faq-wrap h3 {
   margin: 50px 0 20px 0;
   font-size: 32px;
 }
 
 .faq {
-  display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 

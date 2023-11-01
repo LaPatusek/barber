@@ -7,19 +7,19 @@ const Footer = () => {
     <div className={styles.footer}>
       <section className={styles['first-section']}>
         <h3>Lokacja</h3>
-        <p>Niebylec 171</p>
+        <p>Niebylec 111</p>
       </section>
 
       <section className={styles['second-section']}>
         <h3>Godziny otwarcia</h3>
         <p>
-          Wt. - Czw. 9:00 - 17
+          Pon. - Czw. 9:00 - 17
           <br />
           Piątek 10 - 17
           <br />
           Sobota 8 - 17
           <br />
-          Nd & Pon - Zamknięte
+          Nd - Zamknięte
         </p>
       </section>
 
@@ -29,7 +29,7 @@ const Footer = () => {
         <div className={styles['call-icon']}>
           <Call />
         </div>
-        <p>737 350 559</p>
+        <p>+48 123 123 123</p>
       </section>
     </div>
   );

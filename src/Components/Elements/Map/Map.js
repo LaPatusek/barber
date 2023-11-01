@@ -5,8 +5,8 @@ import styles from './Map.module.css';
 
 const MapPin = () => (
   <div className={styles.text}>
-    <Location variant='Bold' size='32' />
-    Niebylec 171
+    <Location variant='Bold' size='32' color='#c2c2c2' />
+    Niebylec 111
   </div>
 );
 

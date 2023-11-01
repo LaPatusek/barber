@@ -1,18 +1,26 @@
 .upper-main-image {
   position: absolute;
   top: 100px;
-  right: 120px;
-  width: 200px;
+  right: 60px;
+}
+
+.upper-main-image img {
+  width: 300px;
+  height: 449.766px;
 }
 
 .upper-main-image p {
   margin-top: 15px;
   font-size: 1.1rem;
-  width: 300px;
+  width: 295px;
 }
 
 .main {
   margin-bottom: 10%;
+}
+
+.main svg {
+  transform: translateY(5px);
 }
 
 .first-section {
@@ -42,10 +50,9 @@
   transition: 0.3s ease-in-out;
 }
 
-.kontakt-button::before {
+.kontakt-button::before,
+.kontakt-button::after {
   position: absolute;
-  top: 0;
-  left: 0;
   content: '';
   border: 1px solid var(--secondary-pink-1);
   height: 100%;
@@ -53,15 +60,14 @@
   transition: 0.3s ease-in-out;
 }
 
+.kontakt-button::before {
+  top: 0;
+  left: 0;
+}
+
 .kontakt-button::after {
-  position: absolute;
   bottom: 0;
   right: 0;
-  content: '';
-  border: 1px solid var(--secondary-pink-1);
-  height: 100%;
-  width: 100%;
-  transition: 0.3s ease-in-out;
 }
 
 .kontakt-button:hover {
@@ -74,7 +80,6 @@
 }
 
 .two-images-in-row {
-  display: grid;
   justify-content: space-between;
   grid-template-columns: 50% 50%;
 }
@@ -85,9 +90,7 @@
 }
 
 .interior-image {
-  z-index: 1;
   border-radius: 3%;
-  position: relative;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   width: 650px;
   max-width: 100%;
@@ -104,7 +107,7 @@
   height: calc(100% - 3px);
   top: 0;
   right: 0;
-  background-color: #000;
+  background-color: #1a1a1a;
   opacity: 0.45;
   z-index: 5;
   border-radius: 3%;
@@ -114,11 +117,19 @@
   height: calc(100% - 172px);
 }
 
-.second-section {
+.second-section,
+.third-section {
   margin: 10rem auto;
   width: 65%;
-  display: grid;
+  position: relative;
+}
+
+.second-section {
   grid-template-columns: 600px calc(100% - 600px);
+}
+
+.third-section {
+  grid-template-columns: calc(100% - 600px) 600px;
 }
 
 .circle span,
@@ -139,146 +150,113 @@
   right: 0;
 }
 
-.right-div {
-  margin-left: 25px;
+.right-div,
+.left-div {
+  margin: 0 25px;
   max-width: 600px;
 }
 
+.right-div h4::before,
+.left-div h4::before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  height: 2px;
+  background-color: var(--secondary-pink-3);
+  transition: all 0.7s ease-in-out;
+}
+
+.left-div h4,
 .right-div h4 {
-  margin-bottom: 35px;
   text-transform: uppercase;
   letter-spacing: 0.7px;
   font-size: 1.5rem;
   color: var(--secondary-pink-3);
-  text-align: right;
   position: relative;
 }
 
+.right-div h4 {
+  text-align: right;
+}
+
 .right-div h4::before {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  right: 0px;
-  height: 2px;
-  background-color: var(--secondary-pink-3);
   width: 75px;
-  transition: right 0.7s ease-in-out;
+  right: 0;
+}
+
+.left-div h4::before {
+  width: 100px;
+  left: 0;
 }
 
 .second-section:hover h4::before {
   right: 35px;
 }
 
-.right-div h2 {
+.third-section:hover h4::before {
+  left: 35px;
+}
+
+.right-div h2,
+.left-div h2 {
+  margin: 30px 0;
   font-size: 3rem;
   letter-spacing: 0.5px;
 }
 
-.right-div p {
-  font-size: 1.2rem;
+.left-div h2 {
+  text-align: right;
+}
+
+.right-div p,
+.left-div p {
+  font-size: 20px;
+  line-height: 20px;
   letter-spacing: 0.6px;
-  margin: 20px 0;
+  margin-bottom: 20px;
   max-width: 400px;
   color: #1a1a1a;
 }
 
-.right-div--link {
+.left-div p {
+  margin-left: auto;
+  text-align: right;
+}
+
+.right-div--link,
+.left-div--link {
   font-size: 1.5rem;
   margin-left: 10px;
   color: #1a1a1a;
   position: relative;
-  transition: 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 
-.main svg {
-  transform: translateY(5px);
+.left-div--link {
+  margin-right: 10px;
 }
 
-.right-div--link::before {
+.right-div--link::before,
+.left-div--link::before {
   content: '';
   position: absolute;
-  left: -10px;
   top: 5px;
   border-radius: 50%;
   width: 20px;
   height: 20px;
   background-color: var(--secondary-green-4);
+}
+
+.right-div--link::before {
+  left: -10px;
 }
 
 .right-div--link:hover {
   margin-left: 20px;
 }
 
-.third-section {
-  margin: 10rem auto;
-  width: 65%;
-  display: grid;
-  grid-template-columns: calc(100% - 600px) 600px;
-  position: relative;
-}
-
-.left-div {
-  margin-right: 4%;
-  max-width: 600px;
-}
-
-.left-div h4 {
-  margin-left: 8%;
-  margin-bottom: 35px;
-  text-transform: uppercase;
-  letter-spacing: 0.7px;
-  font-size: 1.5rem;
-  color: var(--secondary-pink-3);
-  position: relative;
-}
-
-.left-div h4::before {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 0px;
-  height: 2px;
-  background-color: var(--secondary-pink-3);
-  width: 100px;
-  transition: left 0.7s ease-in-out;
-}
-
-.third-section:hover h4::before {
-  left: 35px;
-}
-
-.left-div h2 {
-  font-size: 3rem;
-  text-align: right;
-  margin-bottom: 30px;
-}
-
-.left-div p {
-  max-width: 400px;
-  float: right;
-  font-size: 1.3rem;
-  text-align: right;
-  margin-bottom: 30px;
-  color: #1a1a1a;
-}
-
-.left-div--link {
-  font-size: 1.5rem;
-  margin-right: 10px;
-  color: #1a1a1a;
-  position: relative;
-  transition: 0.7s ease-in-out;
-}
-
 .left-div--link::before {
-  content: '';
-  position: absolute;
   right: -10px;
-  top: 5px;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  background-color: var(--secondary-green-4);
 }
 
 .left-div--link:hover {
@@ -298,10 +276,8 @@
 
   .first-section > .main-title h1 {
     font-size: 4rem;
-    margin-right: 0;
     margin-left: 10px;
     line-height: 65px;
-    margin-bottom: 20px;
   }
 
   .kontakt-button {

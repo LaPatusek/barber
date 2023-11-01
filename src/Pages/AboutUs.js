@@ -38,7 +38,7 @@ const AboutUs = () => {
         <hr />
         <div className={styles['faq-wrap']}>
           <h3 className={styles['faq-title']}>Najczęsciej zadawane pytania</h3>
-          <div className={styles.faq}>
+          <div className={`${styles.faq} grid`}>
             <div className={styles['faq-section']}>
               <hr />
               <h4> Lorem ipsum dolor sit amet?</h4>

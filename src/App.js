@@ -10,9 +10,9 @@ import Services from './Pages/Services';
 const App = () => {
   return (
     <Fragment>
-      <header>
+      <nav>
         <Header />
-      </header>
+      </nav>
 
       <main>
         <Switch>
@@ -34,7 +34,9 @@ const App = () => {
         </Switch>
       </main>
 
-      <Footer />
+      <footer>
+        <Footer />
+      </footer>
     </Fragment>
   );
 };

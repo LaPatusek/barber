@@ -1,9 +1,8 @@
 import { useState } from 'react';
-import backgroundPhoto from '../Assets/barber-interior.jpg';
 import Long from '../Assets/LongHair.svg';
 import Mid from '../Assets/MidHair.svg';
 import Short from '../Assets/ShortHair.svg';
-import Card from '../Components/UI/Card';
+import backgroundPhoto from '../Assets/barber-interior.jpg';
 import ScrollToTop from '../Components/UI/ScrollToTop';
 import styles from './Services.module.css';
 
@@ -32,7 +31,7 @@ const Services = () => {
   };
 
   return (
-    <Card>
+    <div className={styles.card}>
       <div className={styles['image-box']}>
         <img src={backgroundPhoto} alt='' />
         <h1>
@@ -81,7 +80,7 @@ const Services = () => {
                   className={styles[`${hairLength === 'long' && 'active'}`]}
                 />
               </div>
-              
+
               <div className={styles[`${hairLength === null && 'blur'}`]}>
                 <h4>
                   Damskie strzyżenie / {hairLength === 'short' && '25zł'}
@@ -327,7 +326,7 @@ const Services = () => {
         </div>
       </div>
       <ScrollToTop />
-    </Card>
+    </div>
   );
 };
 

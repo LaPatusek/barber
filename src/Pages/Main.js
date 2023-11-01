@@ -52,7 +52,7 @@ const Main = () => {
           </div>
         </section>
 
-        <div className={styles['two-images-in-row']}>
+        <div className={`${styles['two-images-in-row']} grid`}>
           <div className={styles['interior-image-wrap']}>
             <img
               src={interior}
@@ -73,7 +73,7 @@ const Main = () => {
           </div>
         </div>
 
-        <section className={styles['second-section']}>
+        <section className={`${styles['second-section']} grid`}>
           <div className={'image-wrap'}>
             <div className={styles.circle}>
               <p id='tekst' ref={textRef}>
@@ -101,7 +101,7 @@ const Main = () => {
           </div>
         </section>
 
-        <section className={styles['third-section']}>
+        <section className={`${styles['third-section']} grid`}>
           <div className={styles['left-div']}>
             <h4>Usługi</h4>
             <h2> Lorem ipsum dolor</h2>
