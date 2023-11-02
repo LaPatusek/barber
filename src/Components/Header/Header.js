@@ -7,7 +7,7 @@ const Header = () => {
     <div className={styles.header}>
       <Link to='/main'>
         <h2>
-          Zakład Fryzjerski <br /> <span className={styles['title--second-row']}>u DOROTY</span>
+          Zakład Fryzjerski <br /> <span className={styles['title--second-row']}>u DAWIDA</span>
         </h2>
       </Link>
       <Navbar />

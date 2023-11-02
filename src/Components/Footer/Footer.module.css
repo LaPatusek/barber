@@ -19,16 +19,9 @@
   color: #888f9b;
 }
 
-.call-icon {
-  margin-top: 10px;
-  position: absolute;
-  color: #888f9b;
-}
-
 .third-section p {
   margin-top: 5px;
   font-size: 1.3rem;
-  transform: translateX(20%) translateY(calc(-30% + 8px));
 }
 
 .third-section a {
@@ -42,25 +35,19 @@
   transition: all 1s ease;
 }
 
+.third-section svg {
+  transform: translateY(6px);
+}
+
 @media screen and (max-width: 800px) {
   .footer {
     display: block;
     text-align: center;
-    padding-top: 1rem;
+    padding: 2rem 0;
   }
 
-  .first-section,
   .second-section,
   .third-section {
     margin-top: 2rem;
-  }
-
-  .call-icon {
-    position: relative;
-    left:-20%;
-  }
-
-  .third-section p {
-    transform: translateY(-150%) translateX(2%);
   }
 }

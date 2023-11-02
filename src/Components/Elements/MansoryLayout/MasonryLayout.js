@@ -31,7 +31,7 @@ const MasonryLayout = () => {
   });
 
   return (
-    <div className={styles.gallery}>
+    <div className={`${styles.gallery} grid`}>
       <Masonry
         breakpointCols={breakpointColumnsObj}
         className={styles['my-masonry-grid']}

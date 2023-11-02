@@ -22,10 +22,10 @@ const Main = () => {
 
     const ele = text.querySelectorAll('span');
     const secEle = secondText.querySelectorAll('span');
-    text.style.transform = `rotate(${-360}deg)`;
+    text.style.transform = `rotate(${360}deg)`;
     for (let i = 0; i < ele.length; i++) {
-      ele[i].style.transform = `rotate(${i * (360 / ele.length)}deg)`;
-      secEle[i].style.transform = `rotate(${i * (360 / secEle.length)}deg)`;
+      ele[i].style.transform = `rotate(${i * (-260 / ele.length)+ 69}deg)`;
+      secEle[i].style.transform = `rotate(${i * (260 / secEle.length) - 75}deg)`;
     }
   }, []);
 
@@ -43,7 +43,7 @@ const Main = () => {
           <div className={styles['main-title']}>
             <h1>
               ZAKŁAD <br /> FRYZJERSKI <br />
-              <span className={styles['second-part-of-title']}> u DOROTY </span>
+              <span className={styles['second-part-of-title']}> u DAWIDA </span>
             </h1>
 
             <Link to='/kontakt' className={styles['kontakt-button']}>

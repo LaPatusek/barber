@@ -176,8 +176,12 @@
 }
 
 @media screen and (max-width: 800px) {
+  .image-box {
+    height: 100%;
+  }
+
   .image-box img {
-    max-width: 100%;
+    width: 100%;
   }
 
   .image-box::before {
@@ -185,9 +189,9 @@
   }
 
   .image-box h1 {
-    width: 70%;
+    width: 100%;
     font-size: 30px;
-    top: 30%;
+    top: 20%;
   }
 
   .services-section {

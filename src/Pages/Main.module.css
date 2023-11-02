@@ -71,12 +71,12 @@
 }
 
 .kontakt-button:hover {
-  color: var(--secondary-green-4);
+  color: var(--secondary-pink-3);
 }
 
 .kontakt-button:hover::after,
 .kontakt-button:hover::before {
-  border: 1px solid var(--secondary-green-4);
+  border: 1px solid var(--secondary-pink-3);
 }
 
 .two-images-in-row {
@@ -136,9 +136,9 @@
 .second-circle span {
   position: absolute;
   top: -80px;
-  transform-origin: 10px 90px;
+  transform-origin: 0px 90px;
   font-size: 18px;
-  color: var(--secondary-green-4);
+  color: var(--secondary-pink-4);
   text-transform: uppercase;
 }
 
@@ -244,7 +244,7 @@
   border-radius: 50%;
   width: 20px;
   height: 20px;
-  background-color: var(--secondary-green-4);
+  background-color: var(--secondary-pink-3);
 }
 
 .right-div--link::before {

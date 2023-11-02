@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <section className={styles['first-section']}>
-        <h3>Lokacja</h3>
+        <h3>Lokalizacja</h3>
         <p>Niebylec 111</p>
       </section>
 
@@ -26,10 +26,10 @@ const Footer = () => {
       <section className={styles['third-section']}>
         <h3>Kontakt</h3>
         <Link to='/kontakt'>Strona kontaktowa</Link>
-        <div className={styles['call-icon']}>
-          <Call />
-        </div>
-        <p>+48 123 123 123</p>
+
+        <p>
+          <Call color='#888f9b' /> +48 123 123 123
+        </p>
       </section>
     </div>
   );

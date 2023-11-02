@@ -36,7 +36,7 @@
   letter-spacing: 0.6px;
   color: var(--secondary-pink-1);
   position: relative;
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .service-button::before,
@@ -46,7 +46,7 @@
   border: 1px solid var(--secondary-pink-1);
   height: 100%;
   width: 100%;
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .service-button::before {
@@ -61,12 +61,12 @@
 
 .service-button:hover,
 .service-button::after {
-  color: var(--secondary-green-4);
+  color: var(--secondary-pink-3);
 }
 
 .service-button:hover::after,
 .service-button:hover::before {
-  border: 1px solid var(--secondary-green-4);
+  border: 1px solid var(--secondary-pink-3);
 }
 
 .first-section hr {
@@ -117,21 +117,18 @@
 
 @media screen and (max-width: 800px) {
   .box {
-    margin: 2rem;
-    margin-bottom: 0;
+    padding: 4rem 1.5rem;
   }
 
-  .faq {
-    display: block;
+  .about-us-text p {
+    width: 80%;
   }
 
   .faq > .faq-section {
-    width: 90%;
-    margin: auto;
+    width: 95%;
   }
 
-  .first-section p {
-    width: 70%;
-    font-size: 1.2rem;
+  .faq > .faq-section p {
+    width: 85%;
   }
 }

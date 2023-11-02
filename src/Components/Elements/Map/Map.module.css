@@ -1,6 +1,6 @@
 .map,
 .google-map {
-  width: 100vmin;
+  width: 100%;
   height: 55vmin;
   position: relative;
 }
