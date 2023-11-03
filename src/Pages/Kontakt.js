@@ -2,7 +2,7 @@ import Map from '../Components/Elements/Map/Map';
 import ScrollToTop from '../Components/UI/ScrollToTop';
 import styles from './Kontakt.module.css';
 
-const Kontakt = () => {
+export default function Kontakt() {
   return (
     <div className={styles.card}>
       <h1>Skontaktuj się z nami</h1>
@@ -33,6 +33,4 @@ const Kontakt = () => {
       <ScrollToTop />
     </div>
   );
-};
-
-export default Kontakt;
+}

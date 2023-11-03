@@ -3,12 +3,12 @@ import MasonryLayout from '../Components/Elements/MansoryLayout/MasonryLayout';
 import ScrollToTop from '../Components/UI/ScrollToTop';
 import styles from './AboutUs.module.css';
 
-const AboutUs = () => {
+export default function AboutUs() {
   return (
     <div className={styles.box}>
       <div className={styles['first-section']}>
         <div className={styles['about-us-text']}>
-          <h2>About Us</h2>
+          <h1>About Us</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
             vitae hendrerit elit. Nulla pellentesque nulla eget lectus ornare,
@@ -82,6 +82,4 @@ const AboutUs = () => {
       <ScrollToTop />
     </div>
   );
-};
-
-export default AboutUs;
+}

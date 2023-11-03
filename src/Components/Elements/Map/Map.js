@@ -10,7 +10,7 @@ const MapPin = () => (
   </div>
 );
 
-const Map = () => {
+export default function Map() {
   const location = {
     center: {
       lat: 49.85560328028798,
@@ -36,6 +36,4 @@ const Map = () => {
       </div>
     </div>
   );
-};
-
-export default Map;
+}

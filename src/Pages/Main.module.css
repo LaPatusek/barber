@@ -1,6 +1,6 @@
 .upper-main-image {
   position: absolute;
-  top: 100px;
+  top: 60px;
   right: 60px;
 }
 
@@ -10,7 +10,7 @@
 }
 
 .upper-main-image p {
-  margin-top: 15px;
+  margin-top: 5px;
   font-size: 1.1rem;
   width: 295px;
 }
@@ -25,12 +25,14 @@
 
 .first-section {
   justify-content: center;
+  padding-bottom: 4rem;
 }
 
 .first-section > .main-title h1 {
-  font-size: 5rem;
+  font-size: 80px;
   margin: 0 16rem 20px 0;
   line-height: 85px;
+  user-select: none;
 }
 
 .second-part-of-title {
@@ -41,7 +43,7 @@
   border: 5px solid #0f0f0f;
   background-color: #0f0f0f;
   padding: 10px 30px;
-  font-size: 2rem;
+  font-size: 32px;
   color: var(--secondary-pink-1);
   margin-bottom: 20px;
   display: block;
@@ -80,7 +82,6 @@
 }
 
 .two-images-in-row {
-  justify-content: space-between;
   grid-template-columns: 50% 50%;
 }
 
@@ -93,28 +94,26 @@
   border-radius: 3%;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   width: 650px;
-  max-width: 100%;
+  height: 365.625px;
+  display: block;
+  overflow: hidden;
 }
 
 .interior-image-wrap:last-child {
-  margin-top: 170px;
+  margin-top: 100px;
 }
 
 .interior-image-wrap::before {
   content: '';
   position: absolute;
   width: 100%;
-  height: calc(100% - 3px);
+  height: 365.625px;
   top: 0;
   right: 0;
   background-color: #1a1a1a;
   opacity: 0.45;
-  z-index: 5;
+  z-index: 2;
   border-radius: 3%;
-}
-
-.interior-image-wrap:first-child::before {
-  height: calc(100% - 172px);
 }
 
 .second-section,
@@ -170,7 +169,7 @@
 .right-div h4 {
   text-transform: uppercase;
   letter-spacing: 0.7px;
-  font-size: 1.5rem;
+  font-size: 24px;
   color: var(--secondary-pink-3);
   position: relative;
 }
@@ -200,7 +199,7 @@
 .right-div h2,
 .left-div h2 {
   margin: 30px 0;
-  font-size: 3rem;
+  font-size: 48px;
   letter-spacing: 0.5px;
 }
 
@@ -225,7 +224,7 @@
 
 .right-div--link,
 .left-div--link {
-  font-size: 1.5rem;
+  font-size: 24px;
   margin-left: 10px;
   color: #1a1a1a;
   position: relative;
@@ -265,18 +264,34 @@
 
 @media screen and (max-width: 800px) {
   .upper-main-image {
-    display: none;
+    position: relative;
     right: 0;
-    top: 100px;
+    top: 0;
+    height: 420px;
+    width: 100%;
+    display: grid;
+    margin-bottom: 50px;
+  }
+
+  .upper-main-image img {
+    height: calc(449.766px / 1.3);
+    width: auto;
+    justify-self: right;
+  }
+
+  .upper-main-image p {
+    width: 230px;
+    justify-self: right;
   }
 
   .first-section {
-    display: block;
+    justify-content: unset;
+    padding-bottom: 1.5rem;
   }
 
   .first-section > .main-title h1 {
-    font-size: 4rem;
-    margin-left: 10px;
+    font-size: 64px;
+    margin: 0 0 20px 10px;
     line-height: 65px;
   }
 
@@ -284,89 +299,52 @@
     margin-left: 10px;
   }
 
-  .spacer-with-images {
-    display: block;
-    margin-bottom: 8rem;
-  }
-
-  .interior-image-wrap img {
-    width: 82vmin;
-  }
-
-  .interior-image-wrap::before {
-    position: absolute;
-    width: 82vmin;
-    height: calc(100% - 3px);
-    top: 0;
-    left: 0px;
-  }
-
-  .interior-image-wrap:first-child::before {
-    height: 100%;
-  }
-
-  .interior-image-wrap:last-child {
-    margin-top: 30px;
-    margin-left: 40px;
+  .two-images-in-row,
+  .second-section,
+  .third-section {
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .second-section,
   .third-section {
-    display: block;
+    margin: 8rem auto;
+    width: 90%;
+  }
+
+  .right-div {
+    padding-top: 20px;
+  }
+
+  .right-div,
+  .left-div {
+    margin: 0 5px;
+  }
+
+  .interior-image {
+    width: auto;
+    height: calc(365.625px / 2);
+  }
+
+  .interior-image-wrap::before {
+    height: calc(365.625px / 2);
+  }
+
+  .interior-image-wrap:last-child {
+    margin-top: 40px;
   }
 
   .second-section img,
   .third-section img {
-    width: 85vmin;
+    width: 100%;
+    height: auto;
   }
 
   .third-section img {
     transform: scaleX(-1);
   }
 
-  .second-section > .right-div,
-  .third-section > .left-div {
-    width: 85vmin;
-  }
-
-  .second-section > .right-div {
-    margin-left: 0;
-  }
-
-  .second-section > .right-div h4 {
-    position: absolute;
-    top: -35px;
-    right: 20px;
-  }
-
-  .second-section > .right-div h4::before {
-    width: 70px;
-    right: -22px;
-  }
-
-  .third-section > .left-div h2,
-  .second-section > .right-div h2 {
-    margin-bottom: 10px;
-  }
-
-  .third-section > .left-div p,
-  .second-section > .right-div p {
-    margin-top: 0;
-    margin-bottom: 20px;
-  }
-
-  .third-section > .left-div h4::before {
-    width: 70px;
-    left: -27px;
-  }
-
-  .circle span {
-    left: 55px;
-    top: -60px;
-  }
-
-  .second-circle span {
-    right: 55px;
-    top: -140px;
+  .circle,
+  .second-circle {
+    display: none;
   }
 }

@@ -3,11 +3,11 @@ import { Fragment, useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './Navbar.module.css';
 
-const Navbar = () => {
+export default function Navbar() {
   const [menuIsVis, setMenuIsVis] = useState(false);
 
   const menuHandler = () => {
-    setMenuIsVis((prev) => !prev);
+    setMenuIsVis((s) => !s);
   };
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <Fragment>
-      <div className={styles.navbar}>
+      <div className={`${styles.navbar}`}>
         <NavLink
           to='/o-nas'
           className={styles['menu-item']}
@@ -51,47 +51,47 @@ const Navbar = () => {
         </div>
 
         {menuIsVis && (
-          <div className={styles['navbar-menu-800']}>
-            <NavLink
-              to='/main'
-              className={styles['menu-item-800']}
-              activeClassName={styles['active-menu-item-800']}
-              onClick={menuHandler}
-            >
-              <span>Strona główna</span>
-            </NavLink>
+          <div className={styles.overlay} onClick={menuHandler}>
+            <div className={`${styles['navbar-menu-800']}`}>
+              <NavLink
+                to='/main'
+                className={`${styles['menu-item-800']} `}
+                activeClassName={styles['active-menu-item-800']}
+              >
+                <span>Strona główna</span>
+              </NavLink>
 
-            <NavLink
-              to='/o-nas'
-              className={styles['menu-item-800']}
-              activeClassName={styles['active-menu-item-800']}
-              onClick={menuHandler}
-            >
-              <span>O nas</span>
-            </NavLink>
+              <NavLink
+                to='/o-nas'
+                className={styles['menu-item-800']}
+                activeClassName={styles['active-menu-item-800']}
+              >
+                <span>O nas</span>
+              </NavLink>
 
-            <NavLink
-              to='/services'
-              className={styles['menu-item-800']}
-              activeClassName={styles['active-menu-item-800']}
-              onClick={menuHandler}
-            >
-              <span>Usługi</span>
-            </NavLink>
+              <NavLink
+                to='/services'
+                className={styles['menu-item-800']}
+                activeClassName={styles['active-menu-item-800']}
+              >
+                <span>Usługi</span>
+              </NavLink>
 
-            <NavLink
-              to='/kontakt'
-              className={styles['menu-item-800']}
-              activeClassName={styles['active-menu-item-800']}
-              onClick={menuHandler}
-            >
-              <span> Kontakt</span>
-            </NavLink>
+              <NavLink
+                to='/kontakt'
+                className={styles['menu-item-800']}
+                activeClassName={styles['active-menu-item-800']}
+              >
+                <span> Kontakt</span>
+              </NavLink>
+
+              <div className={styles['menu-item-800']}>
+                <span> Zamknij </span>
+              </div>
+            </div>
           </div>
         )}
       </div>
     </Fragment>
   );
-};
-
-export default Navbar;
+}

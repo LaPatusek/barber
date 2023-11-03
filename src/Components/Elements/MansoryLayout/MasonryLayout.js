@@ -1,9 +1,9 @@
 import Masonry from 'react-masonry-css';
-import temp1 from '../../../Assets/barber-interior.jpg';
-import temp2 from '../../../Assets/haircut-main-photo.jpg';
+import temp1 from '../../../Assets/barber-interior.webp';
+import temp2 from '../../../Assets/haircut-main-photo.webp';
 import styles from './MasonryLayout.module.css';
 
-const MasonryLayout = () => {
+export default function MasonryLayout() {
   const breakpointColumnsObj = {
     default: 4,
     1100: 3,
@@ -41,6 +41,4 @@ const MasonryLayout = () => {
       </Masonry>
     </div>
   );
-};
-
-export default MasonryLayout;
+}

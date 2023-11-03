@@ -2,11 +2,11 @@ import { useState } from 'react';
 import Long from '../Assets/LongHair.svg';
 import Mid from '../Assets/MidHair.svg';
 import Short from '../Assets/ShortHair.svg';
-import backgroundPhoto from '../Assets/barber-interior.jpg';
+import backgroundPhoto from '../Assets/barber-interior.webp';
 import ScrollToTop from '../Components/UI/ScrollToTop';
 import styles from './Services.module.css';
 
-const Services = () => {
+export default function Services() {
   const [pickedGender, setPickedGender] = useState('female');
   const [hairLength, setHairLength] = useState(null);
 
@@ -328,6 +328,4 @@ const Services = () => {
       <ScrollToTop />
     </div>
   );
-};
-
-export default Services;
+}

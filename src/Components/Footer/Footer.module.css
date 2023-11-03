@@ -8,31 +8,31 @@
 
 .footer h3 {
   margin-bottom: 10px;
-  font-size: 24px;
+  font-size: 26px;
   user-select: none;
   letter-spacing: 0.6px;
   color: var(--secondary-pink-0);
 }
 
 .footer p {
-  line-height: 23px;
+  font-size: 21px;
+  line-height: 24px;
   color: #888f9b;
 }
 
 .third-section p {
   margin-top: 5px;
-  font-size: 1.3rem;
 }
 
 .third-section a {
-  font-size: 1.2rem;
+  font-size: 21px;
   color: #f1f1f1;
   border-bottom: 1px solid transparent;
+  transition: all 0.5s ease;
 }
 
 .third-section a:hover {
   border-bottom: 1.3px solid #f1f1f1;
-  transition: all 1s ease;
 }
 
 .third-section svg {

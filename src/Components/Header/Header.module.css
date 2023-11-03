@@ -6,7 +6,7 @@
 }
 
 .header h2 {
-  font-size: 3rem;
+  font-size: 48px;
   text-align: center;
   color: rgb(46, 46, 46);
 }
@@ -17,6 +17,15 @@
 
 @media screen and (max-width: 800px) {
   .header {
-    justify-content: center;
+    display: block;
+  }
+
+  .header h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .logo {
+    pointer-events: none !important;
   }
 }
