@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import AboutUs from './Pages/AboutUs';
@@ -15,23 +15,13 @@ const App = () => {
       </nav>
 
       <main>
-        <Switch>
-          <Route path='/main'>
-            <Main />
-          </Route>
-          <Route path='/o-nas'>
-            <AboutUs />
-          </Route>
-          <Route path='/services'>
-            <Services />
-          </Route>
-          <Route path='/kontakt'>
-            <Kontakt />
-          </Route>
-          <Route path='*'>
-            <Main />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path='/main' element={<Main />} />
+          <Route path='/o-nas' element={<AboutUs />} />
+          <Route path='/services' element={<Services />} />
+          <Route path='/kontakt' element={<Kontakt />} />
+          <Route path='*' element={<Main />} />
+        </Routes>
       </main>
 
       <footer>

@@ -22,25 +22,13 @@ export default function Navbar() {
   return (
     <Fragment>
       <div className={`${styles.navbar}`}>
-        <NavLink
-          to='/o-nas'
-          className={styles['menu-item']}
-          activeClassName={styles['active-menu-item']}
-        >
+        <NavLink to='/o-nas' className={`${styles['menu-item']}`}>
           O nas
         </NavLink>
-        <NavLink
-          to='/services'
-          className={styles['menu-item']}
-          activeClassName={styles['active-menu-item']}
-        >
+        <NavLink to='/services' className={styles['menu-item']}>
           Usługi
         </NavLink>
-        <NavLink
-          to='/kontakt'
-          className={styles['menu-item']}
-          activeClassName={styles['active-menu-item']}
-        >
+        <NavLink to='/kontakt' className={styles['menu-item']}>
           Kontakt
         </NavLink>
       </div>
@@ -56,7 +44,7 @@ export default function Navbar() {
               <NavLink
                 to='/main'
                 className={`${styles['menu-item-800']} `}
-                activeClassName={styles['active-menu-item-800']}
+                // activeClassName={styles['active-menu-item-800']}
               >
                 <span>Strona główna</span>
               </NavLink>
@@ -64,7 +52,7 @@ export default function Navbar() {
               <NavLink
                 to='/o-nas'
                 className={styles['menu-item-800']}
-                activeClassName={styles['active-menu-item-800']}
+                // activeClassName={styles['active-menu-item-800']}
               >
                 <span>O nas</span>
               </NavLink>
@@ -72,7 +60,7 @@ export default function Navbar() {
               <NavLink
                 to='/services'
                 className={styles['menu-item-800']}
-                activeClassName={styles['active-menu-item-800']}
+                // activeClassName={styles['active-menu-item-800']}
               >
                 <span>Usługi</span>
               </NavLink>
@@ -80,7 +68,7 @@ export default function Navbar() {
               <NavLink
                 to='/kontakt'
                 className={styles['menu-item-800']}
-                activeClassName={styles['active-menu-item-800']}
+                // activeClassName={styles['active-menu-item-800']}
               >
                 <span> Kontakt</span>
               </NavLink>

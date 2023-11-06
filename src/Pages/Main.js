@@ -47,7 +47,7 @@ export default function Main() {
       </section>
 
       <div className={styles['upper-main-image']}>
-        <img src={haircut} alt='' width='300px' />
+        <img src={haircut} alt='' width={'300px'} />
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
           tincidunt ligula nibh, a blandit erat tempor tincidunt.
@@ -55,24 +55,12 @@ export default function Main() {
       </div>
 
       <div className={`${styles['two-images-in-row']} grid`}>
-        <div className={styles['interior-image-wrap']}>
-          <img
-            src={interior}
-            alt=''
-            width='650px'
-            height={'365.625px'}
-            className={styles['interior-image']}
-          />
-        </div>
-        <div className={styles['interior-image-wrap']}>
-          <img
-            src={interior}
-            alt=''
-            width='650px'
-            height={'365.625px'}
-            className={styles['interior-image']}
-          />
-        </div>
+        <Link to='/o-nas' className={styles['interior-image-wrap']}>
+          <img src={interior} alt='' width={'800px'} height={'506.250px'} />
+          <div className={styles['image-text']}>
+            <h2>Zobacz nasz salon z bliska!</h2>
+          </div>
+        </Link>
       </div>
 
       <section className={`${styles['second-section']} grid`}>

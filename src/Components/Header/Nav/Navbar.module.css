@@ -22,14 +22,8 @@
   width: fit-content;
 }
 
-.menu-item:hover,
-.menu-item:active {
+.menu-item:hover {
   color: var(--secondary-pink-3);
-}
-
-.active-menu-item {
-  color: var(--secondary-pink-3);
-  border-bottom: 1px solid var(--secondary-pink-3);
 }
 
 @media screen and (max-width: 800px) {
@@ -99,10 +93,6 @@
     transition: opacity 0.25s linear;
   }
 
-  .menu-item-800:hover::before {
-    opacity: 1;
-  }
-
   .menu-item-800 span {
     color: #44474d;
     text-transform: uppercase;
@@ -114,15 +104,5 @@
   .menu-item-800 span,
   .menu-item-800:hover span {
     z-index: 3;
-  }
-
-  .active-menu-item-800::before,
-  .active-menu-item-800 {
-    background: linear-gradient(
-      90deg,
-      var(--secondary-pink-1) 0%,
-      var(--secondary-pink-2) 25%,
-      var(--secondary-pink-4) 100%
-    );
   }
 }

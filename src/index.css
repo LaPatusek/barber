@@ -24,3 +24,20 @@ body {
 .flex {
   display: flex;
 }
+
+.active {
+  color: var(--secondary-pink-3) !important;
+  border-bottom: 1px solid var(--secondary-pink-3);
+}
+
+@media screen and (max-width: 900px) {
+  .active::before,
+  .active {
+    background: linear-gradient(
+      90deg,
+      var(--secondary-pink-1) 0%,
+      var(--secondary-pink-2) 25%,
+      var(--secondary-pink-4) 100%
+    );
+  }
+}
