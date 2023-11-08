@@ -1,14 +1,14 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Long from '../Assets/LongHair.svg';
 import Mid from '../Assets/MidHair.svg';
 import Short from '../Assets/ShortHair.svg';
 import backgroundPhoto from '../Assets/barber-interior.webp';
-import ScrollToTop from '../Components/UI/ScrollToTop';
+import ScrollToTop from '../Components/UI/ScrollToTop.tsx';
 import styles from './Services.module.css';
 
-export default function Services() {
+const Services: React.FC =() => {
   const [pickedGender, setPickedGender] = useState('female');
-  const [hairLength, setHairLength] = useState(null);
+  const [hairLength, setHairLength] = useState('');
 
   const femaleFunction = () => {
     setPickedGender('female');
@@ -81,7 +81,7 @@ export default function Services() {
                 />
               </div>
 
-              <div className={styles[`${hairLength === null && 'blur'}`]}>
+              <div className={styles[`${hairLength === '' && 'blur'}`]}>
                 <h4>
                   Damskie strzyżenie / {hairLength === 'short' && '25zł'}
                   {hairLength === 'mid' && '40zł'}
@@ -329,3 +329,5 @@ export default function Services() {
     </div>
   );
 }
+
+export default Services

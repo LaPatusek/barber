@@ -1,8 +1,9 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
-import Navbar from './Nav/Navbar';
+import Navbar from './Nav/Navbar.tsx';
 
-export default function Header() {
+const Header: React.FC = () => {
   return (
     <div className={styles.header}>
       <Link to='/main' className={styles.logo}>
@@ -14,4 +15,6 @@ export default function Header() {
       <Navbar />
     </div>
   );
-}
+};
+
+export default Header;

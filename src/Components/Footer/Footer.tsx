@@ -1,8 +1,9 @@
 import { Call } from 'iconsax-react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
 
-export default function Footer() {
+const Footer: React.FC = () => {
   return (
     <div className={styles.footer}>
       <section className={styles['first-section']}>
@@ -33,4 +34,6 @@ export default function Footer() {
       </section>
     </div>
   );
-}
+};
+
+export default Footer;

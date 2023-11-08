@@ -1,8 +1,9 @@
-import Map from '../Components/Elements/Map/Map';
-import ScrollToTop from '../Components/UI/ScrollToTop';
+import React from 'react';
+import Map from '../Components/Elements/Map/Map.tsx';
+import ScrollToTop from '../Components/UI/ScrollToTop.tsx';
 import styles from './Kontakt.module.css';
 
-export default function Kontakt() {
+const Kontakt: React.FC = () => {
   return (
     <div className={styles.card}>
       <h1>Skontaktuj się z nami</h1>
@@ -33,4 +34,6 @@ export default function Kontakt() {
       <ScrollToTop />
     </div>
   );
-}
+};
+
+export default Kontakt;

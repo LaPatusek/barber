@@ -3,14 +3,19 @@ import { Location } from 'iconsax-react';
 import React from 'react';
 import styles from './Map.module.css';
 
-const MapPin = () => (
+interface MapPinProps {
+  lat: number;
+  lng: number;
+}
+
+const MapPin: React.FC<MapPinProps> = () => (
   <div className={styles.text}>
     <Location variant='Bold' size='32' color='#c2c2c2' />
     Niebylec 111
   </div>
 );
 
-export default function Map() {
+const Map: React.FC = () => {
   const location = {
     center: {
       lat: 49.85560328028798,
@@ -36,4 +41,6 @@ export default function Map() {
       </div>
     </div>
   );
-}
+};
+
+export default Map;

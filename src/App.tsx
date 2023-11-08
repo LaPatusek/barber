@@ -1,13 +1,13 @@
-import { Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Footer from './Components/Footer/Footer';
-import Header from './Components/Header/Header';
-import AboutUs from './Pages/AboutUs';
-import Kontakt from './Pages/Kontakt';
-import Main from './Pages/Main';
-import Services from './Pages/Services';
+import Footer from './Components/Footer/Footer.tsx';
+import Header from './Components/Header/Header.tsx';
+import AboutUs from './Pages/AboutUs.tsx';
+import Kontakt from './Pages/Kontakt.tsx';
+import Main from './Pages/Main.tsx';
+import Services from './Pages/Services.tsx';
 
-const App = () => {
+const App:React.FC = () => {
   return (
     <Fragment>
       <nav>

@@ -1,10 +1,16 @@
 import { HambergerMenu } from 'iconsax-react';
-import { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './Navbar.module.css';
 
-export default function Navbar() {
+const Navbar: React.FC = () => {
   const [menuIsVis, setMenuIsVis] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const firstRef = useRef<HTMLAnchorElement>(null);
+  const secondRef = useRef<HTMLAnchorElement>(null);
+  const thirdRef = useRef<HTMLAnchorElement>(null);
+  const forthRef = useRef<HTMLAnchorElement>(null);
+  const fifthRef = useRef<HTMLDivElement>(null);
 
   const menuHandler = () => {
     setMenuIsVis((s) => !s);
@@ -13,6 +19,23 @@ export default function Navbar() {
   useEffect(() => {
     if (menuIsVis) {
       document.body.style.overflowY = 'hidden';
+
+      const menuRefCurr = menuRef.current;
+      const firstRefCurr = firstRef.current;
+      const secondRefCurr = secondRef.current;
+      const thirdRefCurr = thirdRef.current;
+      const forthRefCurr = forthRef.current;
+      const fifthRefCurr = fifthRef.current;
+
+      setTimeout(() => {
+        menuRefCurr?.classList.toggle(styles['active-menu-800']);
+
+        firstRefCurr?.classList.toggle(styles['visible-menu-item-800']);
+        secondRefCurr?.classList.toggle(styles['visible-menu-item-800']);
+        thirdRefCurr?.classList.toggle(styles['visible-menu-item-800']);
+        forthRefCurr?.classList.toggle(styles['visible-menu-item-800']);
+        fifthRefCurr?.classList.toggle(styles['visible-menu-item-800']);
+      }, 200);
     }
     if (!menuIsVis) {
       document.body.style.overflowY = 'scroll';
@@ -40,19 +63,21 @@ export default function Navbar() {
 
         {menuIsVis && (
           <div className={styles.overlay} onClick={menuHandler}>
-            <div className={`${styles['navbar-menu-800']}`}>
+            <div className={`${styles['navbar-menu-800']}`} ref={menuRef}>
               <NavLink
                 to='/main'
-                className={`${styles['menu-item-800']} `}
-                // activeClassName={styles['active-menu-item-800']}
+                className={styles['menu-item-800']}
+                ref={firstRef}
               >
-                <span>Strona główna</span>
+                <span>
+                  Strona <br /> główna
+                </span>
               </NavLink>
 
               <NavLink
                 to='/o-nas'
                 className={styles['menu-item-800']}
-                // activeClassName={styles['active-menu-item-800']}
+                ref={secondRef}
               >
                 <span>O nas</span>
               </NavLink>
@@ -60,7 +85,7 @@ export default function Navbar() {
               <NavLink
                 to='/services'
                 className={styles['menu-item-800']}
-                // activeClassName={styles['active-menu-item-800']}
+                ref={thirdRef}
               >
                 <span>Usługi</span>
               </NavLink>
@@ -68,12 +93,12 @@ export default function Navbar() {
               <NavLink
                 to='/kontakt'
                 className={styles['menu-item-800']}
-                // activeClassName={styles['active-menu-item-800']}
+                ref={forthRef}
               >
                 <span> Kontakt</span>
               </NavLink>
 
-              <div className={styles['menu-item-800']}>
+              <div className={styles['menu-item-800']} ref={fifthRef}>
                 <span> Zamknij </span>
               </div>
             </div>
@@ -82,4 +107,6 @@ export default function Navbar() {
       </div>
     </Fragment>
   );
-}
+};
+
+export default Navbar;

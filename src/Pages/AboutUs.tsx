@@ -1,9 +1,10 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-import MasonryLayout from '../Components/Elements/MansoryLayout/MasonryLayout';
-import ScrollToTop from '../Components/UI/ScrollToTop';
+import MasonryLayout from '../Components/Elements/MansoryLayout/MasonryLayout.tsx';
+import ScrollToTop from '../Components/UI/ScrollToTop.tsx';
 import styles from './AboutUs.module.css';
 
-export default function AboutUs() {
+const AboutUs: React.FC = () => {
   return (
     <div className={styles.box}>
       <div className={styles['first-section']}>
@@ -83,3 +84,5 @@ export default function AboutUs() {
     </div>
   );
 }
+
+export default AboutUs

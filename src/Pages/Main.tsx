@@ -1,21 +1,22 @@
 import { ArrowLeft, ArrowRight } from 'iconsax-react';
-import { useLayoutEffect, useRef } from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import interior from '../Assets/barber-interior.webp';
 import barber from '../Assets/barber-photo.webp';
 import haircut from '../Assets/haircut-main-photo.webp';
+import ScrollToTop from '../Components/UI/ScrollToTop.tsx';
 import styles from './Main.module.css';
 
-export default function Main() {
-  const textRef = useRef(null);
-  const secondTextRef = useRef(null);
+const Main: React.FC = () => {
+  const textRef = useRef<HTMLParagraphElement>(null);
+  const secondTextRef = useRef<HTMLParagraphElement>(null);
 
   useLayoutEffect(() => {
-    const text = textRef.current;
-    const secondText = secondTextRef.current;
+    const text = textRef.current!;
+    const secondText = secondTextRef.current!;
 
-    text.innerHTML = text.textContent.replace(/\S/g, '<span> $& </span>');
-    secondText.innerHTML = secondText.textContent.replace(
+    text.innerHTML = text.textContent!.replace(/\S/g, '<span> $& </span>');
+    secondText.innerHTML = secondText.textContent!.replace(
       /\S/g,
       '<span> $& </span>',
     );
@@ -116,6 +117,9 @@ export default function Main() {
           </div>
         </div>
       </section>
+      <ScrollToTop />
     </div>
   );
 }
+
+export default Main
